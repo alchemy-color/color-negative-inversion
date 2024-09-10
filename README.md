@@ -1,6 +1,8 @@
 # Color negative conversion
 
-### Process based on the work by Aaron Buchler https://github.com/abpy/color-neg-resources
+#### Process based on the work by Aaron Buchler https://github.com/abpy/color-neg-resources
+
+![Sample file](https://github.com/user-attachments/assets/020c31c2-8519-469e-963c-bbfca1067c87)
 
 ## 1. Prerequisites
 
@@ -39,23 +41,23 @@ Notes
 * Run the "🜃 3. Negative reversal" action. This action prompt you to load the template containing all the layers necessary for the inversion. You can add an extra step that records the loading of the template from your local storage.
 
 ### Usage
-
 1. Adjust the exposure and gamma sliders on the “Exposure/Contrast” layer.
 2. If desired, modify the LUT in the “Print Paper Contrast” layer using the provided paper contrast LUTs to achieve lifted blacks, compressed whites, or a mix of both.
 3. Change the LUT in the “Print Paper Color” layer to any of the provided paper color LUTs for different color rendering.
 4. Set the black and white points on the “Levels” layer. The layer opacity is set to 25% by default to provide a broader operational range.
 5. White balance on the “White Balance” layer using the grey point sampling tool. The layer opacity is set to 50% by default, but you can increase it for a stronger effect.
 6. Adjust any other layers as needed.
-7. For web publishing, flatten the image, convert bit depth to 8 bit, color space to sRGB, and export.
 
-<img width="436" alt="Screenshot 2024-09-10 at 17 52 56" src="https://github.com/user-attachments/assets/eed242e9-7fec-4b98-8e48-98ec1dadbab9">
 
+**EXPORTING FOR WEB**
+
+For web publishing, run the "🜃 4. Convert for web delivery" action. This will flatten the image, convert th bit depth to 8 bit and the color space to sRGB.
 
 ## 3. Creating an XMP profile
 Creating the negative conversion XMP profile to be applied to TIFF and RAW files.
 
 * Reverse the negative in Photoshop to taste.
-* Run the “🜃 4. Create negative reversal LUT REC.2020” action.
+* Run the “🜃 5. Create negative reversal LUT REC.2020” action.
 * You will be prompted to open the file "Negative Reversal LUT.png". You can add an extra step that records the loading of the HALD file from your local storage.
 * Then you will be prompted to save the file with the embedded LUT. Do not overwrite the original "Negative Reversal LUT.png" file.
 * Convert the resulting PNG file into a .cube 3D LUT in https://sirserch.github.io/lut-creator-js/.
