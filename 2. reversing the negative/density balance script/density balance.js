@@ -163,12 +163,12 @@ rm = 1 / Math.pow(10, ra);
 gm = 1 / Math.pow(10, ga);
 bm = 1 / Math.pow(10, ba);
 
-// Get the currently selected layer
-var selectedLayer = app.activeDocument.activeLayer;
+// Get the first layer in the document
+var firstLayer = app.activeDocument.layers[0];
 
-// Create or get the group and place it above the selected layer
+// Create or get the group and place it above the first layer
 var groupName = "Density Balance";
-var group = createOrGetGroupAboveSelectedLayer(groupName, selectedLayer);
+var group = createOrGetGroupAboveFirstLayer(groupName, firstLayer);
 
 // Add the first exposure layer, rename it, move it to the group, and delete its mask
 var redLayer = addExposureLayer(log2(rm), 0.0, 1 / rs);
@@ -183,3 +183,31 @@ setChannelRestrictions(false, false, true);
 blueLayer.name = "Density Balance Blue";  // Renaming the layer
 blueLayer.move(group, ElementPlacement.INSIDE);
 deleteLayerMask(blueLayer);
+
+// Deselect the group to collapse it
+collapseGroupByDeselecting();
+
+// Function to create or get a group and place it above the first layer
+function createOrGetGroupAboveFirstLayer(groupName, firstLayer) {
+    var doc = app.activeDocument;
+
+    // Check if the group already exists
+    var group = null;
+    try {
+        group = doc.layerSets.getByName(groupName);
+    } catch (e) {
+        // Group doesn't exist, so create a new one
+        group = doc.layerSets.add();
+        group.name = groupName;
+    }
+
+    // Move the group above the first layer
+    group.move(firstLayer, ElementPlacement.PLACEBEFORE);
+    return group;
+}
+
+// Function to deselect the group to collapse it
+function collapseGroupByDeselecting() {
+    // Select the first layer to deselect the group
+    app.activeDocument.activeLayer = app.activeDocument.layers[0];
+}
