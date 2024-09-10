@@ -1,7 +1,7 @@
 # Color negative conversion
 
 #### Process based on the work by Aaron Buchler https://github.com/abpy/color-neg-resources.
-Invert DSLR or dedicated scanner DNG scans of color negative film.
+Invert DSLR or dedicated scanner DNG scans of color negative film in Adobe Photoshop/Lightroom.
 
 ![Sample file](https://github.com/user-attachments/assets/020c31c2-8519-469e-963c-bbfca1067c87)
 
