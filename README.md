@@ -34,7 +34,7 @@ Notes
 * Use the eyedropper tool to select background and foreground colors. Whenever possible, choose known neutral areas of the photographed scene. Having a photograph of a color checker illuminated under a known light source will be very helpful at this step as it allows for an accurate and consistent color balance for other photographs in the roll. Mild differences in the white point can be compensated for later.
 * Dark neutral: ALT+click on a neutral, bright part of the negative.
 * Bright neutral: Click on a neutral, dark part of the negative.
-* Run the "🜃 2. Load density balance script" action. This action prompt you to load the `density balance.js` script. File>Scripts>Browse>density balance.js`. You can add an extra step that records the loading of the script from your local storage.
+* Run the "🜃 2. Load density balance script" action. This action prompt you to load the `density balance.js` script. File>Scripts>Browse>density balance.js. You can add an extra step that records the loading of the script from your local storage.
 * Continue running the action.
 * Run the "🜃 3. Negative reversal" action. This action prompt you to load the template containing all the layers necessary for the inversion. You can add an extra step that records the loading of the template from your local storage.
 
