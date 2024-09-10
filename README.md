@@ -30,13 +30,13 @@ Notes
 * Adobe Standard is used for the sake of compatibility. The vast majority of digital cameras are supported by this standard. When comparing negative inversions made with Adobe Standard versus a custom, highly accurate calibrated profile, the difference is more technical than perceptual.
 
 ## 3. Reversing the negative
-* Run the "🜃 Negative reversal REC.2020" action.
+* Run the "🜃 1. Convert to 32 bit" action. This action will convert the image to 32 bit.
 * Use the eyedropper tool to select background and foreground colors. Whenever possible, choose known neutral areas of the photographed scene. Having a photograph of a color checker illuminated under a known light source will be very helpful at this step as it allows for an accurate and consistent color balance for other photographs in the roll. Mild differences in the white point can be compensated for later.
 * Dark neutral: ALT+click on a neutral, bright part of the negative.
 * Bright neutral: Click on a neutral, dark part of the negative.
-* Load “density balance.js” script. File>Scripts>Browse>“density balance.js.
+* Run the "🜃 2. Load density balance script" action. This action prompt you to load the density balance.js script. File>Scripts>Browse>“density balance.js.
 * Continue running the action.
-At this point you should have a viewable positive image.
+* Run the "🜃 3. Negative reversal" action. This action prompt you to load the template containing all the layers necessary for the inversion.
 
 ### Usage
 
