@@ -34,9 +34,9 @@ Notes
 * Use the eyedropper tool to select background and foreground colors. Whenever possible, choose known neutral areas of the photographed scene. Having a photograph of a color checker illuminated under a known light source will be very helpful at this step as it allows for an accurate and consistent color balance for other photographs in the roll. Mild differences in the white point can be compensated for later.
 * Dark neutral: ALT+click on a neutral, bright part of the negative.
 * Bright neutral: Click on a neutral, dark part of the negative.
-* Run the "🜃 2. Load density balance script" action. This action prompt you to load the density balance.js script. File>Scripts>Browse>“density balance.js. You can add a step that records the loading of the script from your local storage.
+* Run the "🜃 2. Load density balance script" action. This action prompt you to load the density balance.js script. File>Scripts>Browse>'density balance.js'. You can add an extra step that records the loading of the script from your local storage.
 * Continue running the action.
-* Run the "🜃 3. Negative reversal" action. This action prompt you to load the template containing all the layers necessary for the inversion. You can add a step that records the loading of the template from your local storage.
+* Run the "🜃 3. Negative reversal" action. This action prompt you to load the template containing all the layers necessary for the inversion. You can add an extra step that records the loading of the template from your local storage.
 
 ### Usage
 
@@ -49,12 +49,12 @@ Notes
 7. For web publishing, flatten the image, convert the color space to sRGB, and export.
 
 
-## 3. Creating a XMP profile
+## 3. Creating an XMP profile
 Creating the negative conversion XMP profile to be applied to TIFF and RAW files.
 
 * Reverse the negative in Photoshop to taste.
-* Run the “🜃 Create negative reversal LUT” action.
-* You will be prompted to open the file "Negative Reversal LUT.png".
+* Run the “🜃 4. Create negative reversal LUT REC.2020” action.
+* You will be prompted to open the file "Negative Reversal LUT.png". You can add an extra step that records the loading of the HALD file from your local storage.
 * Then you will be prompted to save the file with the embedded LUT. Do not overwrite the original "Negative Reversal LUT.png" file.
 * Convert the resulting PNG file into a .cube 3D LUT in https://sirserch.github.io/lut-creator-js/.
 * Open the negative tiff in the camera raw dialogue. Switch off HDR if selected by default.
