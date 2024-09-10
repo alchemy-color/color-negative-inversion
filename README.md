@@ -46,7 +46,9 @@ Notes
 4. Set the black and white points on the “Levels” layer. The layer opacity is set to 25% by default to provide a broader operational range.
 5. White balance on the “White Balance” layer using the grey point sampling tool. The layer opacity is set to 50% by default, but you can increase it for a stronger effect.
 6. Adjust any other layers as needed.
-7. For web publishing, flatten the image, convert the color space to sRGB, and export.
+7. For web publishing, flatten the image, convert bit depth to 8 bit, color space to sRGB, and export.
+
+<img width="436" alt="Screenshot 2024-09-10 at 17 52 56" src="https://github.com/user-attachments/assets/eed242e9-7fec-4b98-8e48-98ec1dadbab9">
 
 
 ## 3. Creating an XMP profile
