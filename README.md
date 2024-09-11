@@ -47,11 +47,12 @@ Notes
 
 ### Usage
 1. Adjust the exposure and gamma sliders on the “Exposure/Contrast” layer to extract the full dynamic range of the negative. For very contrasted or dense negatives, start by moving the gamma correction slider to the left to reduce contrast, then lower the exposure. You can preserve some faded blacks at this point. The black point can be restored with the Levels layer upstream.
-2. If desired, modify the LUT in the “Print Paper Contrast” layer using the provided paper contrast LUTs to achieve lifted blacks, compressed whites, or a combination of both.
-3. Change the LUT in the “Print Paper Color” layer to any of the provided paper color LUTs for different color rendering.
-4. Set the black and white points on the “Levels” layer. The layer opacity is set to 25% by default to provide a broader operational range.
-5. Adjust white balance on the “White Balance” layer using the gray point sampling tool. The layer opacity is set to 50% by default, but you can increase it for a stronger effect.
-6. Adjust any other layers as needed.
+2. Over and under-exposed parts of the negative fall outside its useful dynamic range. While it may be tempting to recover every bit of information, it is often better to clip these areas to pure black or white. Photoshop doesn't have a histogram in 32 bit mode.
+3. If desired, modify the LUT in the “Print Paper Contrast” layer using the provided paper contrast LUTs to achieve lifted blacks, compressed whites, or a combination of both.
+4. Change the LUT in the “Print Paper Color” layer to any of the provided paper color LUTs for different color rendering.
+5. Set the black and white points on the “Levels” layer. The layer opacity is set to 25% by default to provide a broader operational range.
+6. Adjust white balance on the “White Balance” layer using the gray point sampling tool. The layer opacity is set to 50% by default, but you can increase it for a stronger effect.
+7. Adjust any other layers as needed.
 
 ## Paper contrast LUTs
 file|function
