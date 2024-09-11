@@ -3,7 +3,8 @@
 #### Process based on the work by Aaron Buchler https://github.com/abpy/color-neg-resources.
 Invert DSLR or dedicated scanner DNG scans of color negative film.
 
-![Sample file](https://github.com/user-attachments/assets/020c31c2-8519-469e-963c-bbfca1067c87)
+![DSC07009-2](https://github.com/user-attachments/assets/09767f74-add3-44b5-aac4-98f1294d7668)
+
 
 ## 1. Prerequisites
 
