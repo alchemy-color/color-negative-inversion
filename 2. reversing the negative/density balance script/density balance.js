@@ -20,7 +20,7 @@ function addExposureLayer(e, o, g) {
     var idpresetKindType = stringIDToTypeID( "presetKindType" );
     var idpresetKindDefault = stringIDToTypeID( "presetKindDefault" );
     desc86.putEnumerated( idpresetKind, idpresetKindType, idpresetKindDefault );
-    var idExps = charIDToTypeID( "Exps" );
+    var idExps = charIDToTypeID( "Exps" );  
     desc86.putDouble( idExps, e );
     var idOfst = charIDToTypeID( "Ofst" );
     desc86.putDouble( idOfst, o );
@@ -162,13 +162,12 @@ ba = (md - bd) / bs;
 rm = 1 / Math.pow(10, ra);
 gm = 1 / Math.pow(10, ga);
 bm = 1 / Math.pow(10, ba);
-
 // Get the first layer in the document
 var firstLayer = app.activeDocument.layers[0];
 
-// Create or get the group and place it above the first layer
+// Create or get the group and place it below the "Negative Reversal" group
 var groupName = "Density Balance";
-var group = createOrGetGroupAboveFirstLayer(groupName, firstLayer);
+var group = createOrGetGroupBelowGroup(groupName, "Negative Reversal");
 
 // Add the first exposure layer, rename it, move it to the group, and delete its mask
 var redLayer = addExposureLayer(log2(rm), 0.0, 1 / rs);
@@ -187,22 +186,38 @@ deleteLayerMask(blueLayer);
 // Deselect the group to collapse it
 collapseGroupByDeselecting();
 
-// Function to create or get a group and place it above the first layer
-function createOrGetGroupAboveFirstLayer(groupName, firstLayer) {
+// Function to create or get a group and place it below the specified group
+function createOrGetGroupBelowGroup(groupName, referenceGroupName) {
     var doc = app.activeDocument;
-
-    // Check if the group already exists
+    var referenceGroup = null;
     var group = null;
+
+    // Check if the reference group exists
     try {
-        group = doc.layerSets.getByName(groupName);
+        referenceGroup = doc.layerSets.getByName(referenceGroupName);
     } catch (e) {
-        // Group doesn't exist, so create a new one
-        group = doc.layerSets.add();
-        group.name = groupName;
+        alert("Reference group '" + referenceGroupName + "' not found.");
+        return null;
     }
 
-    // Move the group above the first layer
-    group.move(firstLayer, ElementPlacement.PLACEBEFORE);
+    // Check if the target group already exists
+    try {
+        group = doc.layerSets.getByName(groupName);
+        // If group exists, delete it
+        if (group) {
+            group.remove();
+            group = null; // Reset group to create a new one
+        }
+    } catch (e) {
+        // Group doesn't exist, so do nothing here
+    }
+
+    // Create a new group
+    group = doc.layerSets.add();
+    group.name = groupName;
+
+    // Move the group below the reference group
+    group.move(referenceGroup, ElementPlacement.PLACEAFTER);
     return group;
 }
 
