@@ -1,10 +1,10 @@
 # Color negative conversion
 
 #### Process based on the work by Aaron Buchler https://github.com/abpy/color-neg-resources.
-Invert DSLR or dedicated scanner DNG scans of color negative film.
+The following process is designed to offer a well-informed, accurate, and flexible method for converting negative images to positive in Photoshop.
 
 ![DSC07009-2](https://github.com/user-attachments/assets/09767f74-add3-44b5-aac4-98f1294d7668)
-
+Kodak Gold 200 negative illuminated with an iPad screen, photographed with a Sony A7IV, processed with the method described below.
 
 ## 1. Prerequisites
 
