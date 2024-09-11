@@ -162,12 +162,13 @@ ba = (md - bd) / bs;
 rm = 1 / Math.pow(10, ra);
 gm = 1 / Math.pow(10, ga);
 bm = 1 / Math.pow(10, ba);
-// Get the first layer in the document
-var firstLayer = app.activeDocument.layers[0];
 
-// Create or get the group and place it below the "Negative Reversal" group
+// Get the currently selected layer
+var selectedLayer = app.activeDocument.activeLayer;
+
+// Create or get the group and move it to the lowest position
 var groupName = "Density Balance";
-var group = createOrGetGroupBelowGroup(groupName, "Negative Reversal");
+var group = createOrGetGroupAtLowestPosition(groupName);
 
 // Add the first exposure layer, rename it, move it to the group, and delete its mask
 var redLayer = addExposureLayer(log2(rm), 0.0, 1 / rs);
@@ -186,21 +187,12 @@ deleteLayerMask(blueLayer);
 // Deselect the group to collapse it
 collapseGroupByDeselecting();
 
-// Function to create or get a group and place it below the specified group
-function createOrGetGroupBelowGroup(groupName, referenceGroupName) {
+// Function to create or get a group and move it to the lowest position
+function createOrGetGroupAtLowestPosition(groupName) {
     var doc = app.activeDocument;
-    var referenceGroup = null;
     var group = null;
 
-    // Check if the reference group exists
-    try {
-        referenceGroup = doc.layerSets.getByName(referenceGroupName);
-    } catch (e) {
-        alert("Reference group '" + referenceGroupName + "' not found.");
-        return null;
-    }
-
-    // Check if the target group already exists
+    // Check if the group already exists
     try {
         group = doc.layerSets.getByName(groupName);
         // If group exists, delete it
@@ -216,8 +208,9 @@ function createOrGetGroupBelowGroup(groupName, referenceGroupName) {
     group = doc.layerSets.add();
     group.name = groupName;
 
-    // Move the group below the reference group
-    group.move(referenceGroup, ElementPlacement.PLACEAFTER);
+    // Move the group to the lowest position (below all other layers and groups)
+    group.move(doc, ElementPlacement.PLACEATEND);
+
     return group;
 }
 
