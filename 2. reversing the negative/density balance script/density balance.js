@@ -166,9 +166,9 @@ bm = 1 / Math.pow(10, ba);
 // Get the currently selected layer
 var selectedLayer = app.activeDocument.activeLayer;
 
-// Create or get the group and move it to the lowest position
+// Create or get the group and move it above the lowest position
 var groupName = "Density Balance";
-var group = createOrGetGroupAtLowestPosition(groupName);
+var group = createOrGetGroupAboveLowestPosition(groupName);
 
 // Add the first exposure layer, rename it, move it to the group, and delete its mask
 var redLayer = addExposureLayer(log2(rm), 0.0, 1 / rs);
@@ -187,8 +187,8 @@ deleteLayerMask(blueLayer);
 // Deselect the group to collapse it
 collapseGroupByDeselecting();
 
-// Function to create or get a group and move it to the lowest position
-function createOrGetGroupAtLowestPosition(groupName) {
+// Function to create or get a group and move it above the lowest position
+function createOrGetGroupAboveLowestPosition(groupName) {
     var doc = app.activeDocument;
     var group = null;
 
@@ -208,8 +208,10 @@ function createOrGetGroupAtLowestPosition(groupName) {
     group = doc.layerSets.add();
     group.name = groupName;
 
-    // Move the group to the lowest position (below all other layers and groups)
-    group.move(doc, ElementPlacement.PLACEATEND);
+    // Get the lowest layer and move the group just above it
+    var layers = doc.layers;
+    var lowestLayer = layers[layers.length - 1]; // Get the last layer (lowest layer)
+    group.move(lowestLayer, ElementPlacement.PLACEBEFORE); // Place the group above the lowest layer
 
     return group;
 }
