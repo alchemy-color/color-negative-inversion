@@ -42,6 +42,7 @@ Notes
 * Pick dark neutral: ALT+click on a neutral, bright part of the negative.
 * Pick bright neutral: Click on a neutral, dark part of the negative.
 * Run the "🜃 2. Load density balance script" action. This action prompt you to load the `density balance.js` script. File>Scripts>Browse>`density balance.js`. You can add an extra step that records the loading of the script from your local storage.
+* It's worth experimenting with different neutral points, especially from other photographs in the same roll. Load other images as a background layer and repeat these steps if you encounter dramatic shifts in white balance.
 * Run the "🜃 3. Negative reversal" action. This action prompt you to load the template containing all the layers necessary for the inversion. You can add an extra step that records the loading of the template from your local storage.
 
 ### Usage
