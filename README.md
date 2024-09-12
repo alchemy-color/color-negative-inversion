@@ -37,7 +37,7 @@ Notes
 * Adobe Standard is used for the sake of compatibility. The vast majority of digital cameras are supported by this standard. When comparing negative inversions made with Adobe Standard versus a custom, highly accurate calibrated profile, the difference is more technical than perceptual.
 
 ## 3. Reversing the negative
-*	Run the “🜃 1. Convert to 32-bit” action. This will convert the image to 32-bit and switch the color space to REC.2020 if it hasn’t already been converted.
+*	Run the “🜃 1. Convert to 32-bit” action. This will convert the image to 32-bit and the color space to REC.2020 if it hasn’t already been converted.
 * Use the eyedropper tool to select background and foreground colors. Whenever possible, choose neutral areas within the photographed scene. A color checker image illuminated under a known light source is highly beneficial at this step, as it ensures accurate and consistent color balance for other photos in the roll. Minor white point variations can be adjusted in another layer.
 * Pick dark neutral: ALT+click on a neutral, bright part of the negative.
 * Pick bright neutral: Click on a neutral, dark part of the negative.
