@@ -35,6 +35,7 @@ Copy the "🜃 Alchemy Color tools" folder to:
 Notes
 * A fundamental initial step in this whole process is preserving the linearity of the contrast in the digital photograph of the negative. The curve loaded by this preset draws the reverse shape of the tone curve of the Adobe Standard DNG profile.
 * Adobe Standard is used for the sake of compatibility. The vast majority of digital cameras are supported by this standard. When comparing negative inversions made with Adobe Standard versus a custom, highly accurate calibrated profile, the difference is more technical than perceptual.
+* Better accuracy can be achieved with a custom created DNG camera profile specific to the light source used to illuminate the negative. Using such a profile negates the usage of print paper color emulation during the inversion stage.
 
 ## 3. Reversing the negative
 * Run the "🜃 1. Convert to 32 bit" action. This action will convert the image to 32 bit.
