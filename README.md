@@ -1,7 +1,9 @@
 # Color negative conversion
 
 #### Process based on the work by Aaron Buchler https://github.com/abpy/color-neg-resources and Jack Whitaker https://github.com/jackw01/scanlight.
-The following process provides a well-informed, accurate, and flexible method for converting negative images to positive in Photoshop. Aaron Buchler's semi-automated method for converting negatives in 32-bit serves as the foundation for this approach, which simplifies and streamlines the workflow. Paper color emulation LUTs are based on publicly available ICC profiles. These profiles were stripped of tonal curves and converted into .cube LUTs compatible with Photoshop.
+The following process provides a well-informed, accurate, and flexible method for converting negative images to positive in Photoshop. Aaron Buchler's semi-automated method for converting negatives in 32-bit serves as the foundation for this approach, which simplifies and streamlines the original workflow.
+
+The paper color emulation LUTs provided are based on publicly available ICC profiles. These profiles were stripped of tonal curves and converted into .cube LUTs compatible with Photoshop.
 
 ![DSC07009-2](https://github.com/user-attachments/assets/09767f74-add3-44b5-aac4-98f1294d7668)
 Kodak Gold 200 negative shot with a Canon EOS50e and Canon EF 100mm f/2.8. Negative illuminated with an iPad screen, photographed with a Sony A7IV, processed with the method described below.
@@ -38,7 +40,7 @@ Notes
 * Better accuracy can be achieved with a custom created DNG camera profile specific to the light source used to illuminate the negative. Using such a profile negates the usage of print paper color emulation during the inversion stage.
 
 ## 3. Reversing the negative
-* Run the "🜃 1. Convert to 32 bit" action. This action will convert the image to 32 bit.
+*	Run the “🜃 1. Convert to 32-bit” action. This will convert the image to 32-bit and the color space to REC.2020 if it hasn’t already been converted.
 * Use the eyedropper tool to select background and foreground colors. Whenever possible, choose neutral areas within the photographed scene. A color checker image illuminated under a known light source is highly beneficial at this step, as it ensures accurate and consistent color balance for other photos in the roll. Minor white point variations can be adjusted in another layer.
 * Pick dark neutral: ALT+click on a neutral, bright part of the negative.
 * Pick bright neutral: Click on a neutral, dark part of the negative.
