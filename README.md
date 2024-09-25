@@ -59,9 +59,7 @@ Notes
 
 * This is related to the color management policies in Color Settings. 
 
-<div align="center">
 <img width="906" alt="Screenshot 2024-09-25 at 16 48 02" src="https://github.com/user-attachments/assets/5d72c181-66b8-4e34-be71-94cf48d786fa">
-</div>
 
 * To prevent the profile missmatch message, untick "Profile missmatches: Ask When Opening"
 
