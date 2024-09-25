@@ -59,7 +59,7 @@ Notes
 
  <img width="419" alt="Screenshot 2024-09-25 at 16 50 07" src="https://github.com/user-attachments/assets/ec8827f0-cc45-4497-a828-aec9a15a94f3">
 
-* You should see these layers loaded.
+* At this point you should see these layers loaded.
 
  <img width="321" alt="Screenshot 2024-09-25 at 16 53 59" src="https://github.com/user-attachments/assets/96f37038-3c20-4ce1-bed2-cd17e3edb6be">
 
