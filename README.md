@@ -49,9 +49,7 @@ Notes
 * Run the "🜃 3. Negative reversal" action. This action prompt you to load the template containing all the layers necessary for the inversion. You can add an extra step that records the loading of the template from your local storage.
 * If you encounter a message about profile missmatching, select "Use the embeded profile (instead of the working space)"
 
-<div align="center">
 <img width="420" alt="Screenshot 2024-09-25 at 16 57 09" src="https://github.com/user-attachments/assets/c3fc269f-9711-44bb-a368-da2da82a8420">
-</div>
 
 * This is related to the color management policies in Color Settings. 
 
@@ -61,15 +59,11 @@ Notes
 
 * To prevent the profile missmatch message, untick "Profile missmatches: Ask When Opening"
 
-<div align="center">
 <img width="419" alt="Screenshot 2024-09-25 at 16 50 07" src="https://github.com/user-attachments/assets/ec8827f0-cc45-4497-a828-aec9a15a94f3">
-</div>
 
 * At this point you should see these layers loaded.
 
-<div align="center">
 <img width="321" alt="Screenshot 2024-09-25 at 16 53 59" src="https://github.com/user-attachments/assets/96f37038-3c20-4ce1-bed2-cd17e3edb6be">
-</div>
 
 ### Usage #1 - Inverting and developing in Photoshop
 1. Adjust the exposure and gamma sliders on the “Exposure/Contrast” layer to extract the full dynamic range of the negative. For very contrasted or dense negatives, start by moving the gamma correction slider to the left to reduce contrast, then lower the exposure. You can preserve some faded blacks at this point. The black point can be restored with the Levels layer upstream.
@@ -114,7 +108,9 @@ Creating the negative conversion XMP profile to be applied to TIFF and RAW files
   * Load the 🜃 Adobe Standard to Linear preset.
   * Load the recently created profile with the negative reversal LUT.
 
+<div align="center">
 <img width="536" alt="Create  XMP profile" src="https://github.com/user-attachments/assets/45d878ef-f2d6-49a1-a1c7-6d12917f3d7c">
+</div>
 
 Notes
 *  The default working RGB color space in Photoshop is sRGB. Color may be slightly altered as the conversion from 32 to 16 bit at certain steps of the process defaults the color space to sRGB, regardless of the original color space of the image. It's recommended that you change the working RGB to REC.2020 in color settings for an accurate LUT extraction.
