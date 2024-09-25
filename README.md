@@ -6,7 +6,7 @@ The following process provides a well-informed, accurate, and flexible method fo
 The paper color emulation LUTs provided are based on publicly available ICC profiles. These profiles were stripped of tonal curves and converted into .cube LUTs compatible with Photoshop.
 
 ![DSC07009-2](https://github.com/user-attachments/assets/09767f74-add3-44b5-aac4-98f1294d7668)
-Kodak Gold 200 negative shot with a Canon EOS50e and Canon EF 100mm f/2.8. Negative illuminated with an iPad screen, photographed with a Sony A7IV, processed with the method described below.
+Kodak Gold 200 negative shot with a Canon EOS50e and Canon EF 100 mm f/2.8. Negative illuminated with an iPad screen, photographed with a Sony A7IV, processed with the method described below.
 
 more at www.alchemycolor.com
 
@@ -53,7 +53,7 @@ Notes
 * Run the "🜃 2. Load density balance script" action. This action prompt you to load the `density balance.js` script. File>Scripts>Browse>`density balance.js`. You can add an extra step that records the loading of the script from your local storage.
 * It's worth experimenting with different neutral points, especially from other photographs in the same roll. Load other images as a background layer and repeat these steps if you encounter dramatic shifts in white balance. Create a contact sheet to experiment with more than one photograph at once.
 * Run the "🜃 3. Negative reversal" action. This action prompt you to load the template containing all the layers necessary for the inversion. You can add an extra step that records the loading of the template from your local storage.
-* If you encounter a message about profile missmatching, select "Use the embeded profile (instead of the working space)"
+* If you encounter a message about profile mismatching, select "Use the embedded profile (instead of the working space)"
 
 <img width="420" alt="Screenshot 2024-09-25 at 16 57 09" src="https://github.com/user-attachments/assets/c3fc269f-9711-44bb-a368-da2da82a8420">
 
@@ -61,7 +61,7 @@ Notes
 
 <img width="906" alt="Screenshot 2024-09-25 at 16 48 02" src="https://github.com/user-attachments/assets/5d72c181-66b8-4e34-be71-94cf48d786fa">
 
-* To prevent the profile missmatch message, untick "Profile missmatches: Ask When Opening"
+* To prevent the profile mismatch message, untick "Profile mismatches: Ask When Opening"
 
 <img width="419" alt="Screenshot 2024-09-25 at 16 50 07" src="https://github.com/user-attachments/assets/ec8827f0-cc45-4497-a828-aec9a15a94f3">
 
@@ -82,6 +82,7 @@ Notes
 1. A flat image can also be saved for further editing in Lightroom. Deactivate every layer above "Linear (negative) > Linear (positive)", save the image. Keep the "Negative Reversal" group active as it contains a necessary LUT.
 2. Open the image in Lightroom and edit to taste.
 3. This method allows for the usage of every Lightroom tool instead of Photoshop layers.
+4. Note that white balance editing in Lightroom won't be near as efficient as the 32 bit edits in Photoshop.
 
 ## Paper contrast LUTs
 file|function
