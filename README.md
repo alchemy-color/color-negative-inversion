@@ -21,6 +21,8 @@ Copy "🜃 Adobe Standard to Linear.xmp" to:
 * Mac: Users/[username]/Library/Application Support/Adobe/CameraRaw/Settings/
 * Windows: C:\Users\[username]\AppData\Roaming\Adobe\CameraRaw\Settings
 
+If by any chance you don't have the REC.2020 profile installed in your system.
+
 Copy "Rec. 2020.icc" to:
 * Mac: /Library/Application Support/Adobe/Color/Profiles
 * Windows: C:\Windows\System32\spool\drivers\color
