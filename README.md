@@ -17,7 +17,7 @@ contact: info@alchemycolor.com
 ### Installing presets and profiles
 Install the XMP preset. This preset reverses the effect of the default tone curve of the Adobe Standard profile. This is a fundamental part of the conversion.
 
-Copy the "🜃 Alchemy Color tools" folder to:
+Copy "🜃 Adobe Standard to Linear.xmp" to:
 * Mac: Users/[username]/Library/Application Support/Adobe/CameraRaw/Settings/
 * Windows: C:\Users\[username]\AppData\Roaming\Adobe\CameraRaw\Settings
 

@@ -4,7 +4,7 @@
     xmlns:crs="http://ns.adobe.com/camera-raw-settings/1.0/"
    crs:PresetType="Normal"
    crs:Cluster="🜃 Alchemy Color tools"
-   crs:UUID="73D0CD92650947D5BC882163B8144AE1"
+   crs:UUID="FE15A66E80DB4B3AA63ED68D3044517C"
    crs:SupportsAmount2="False"
    crs:SupportsAmount="False"
    crs:SupportsColor="True"
@@ -27,10 +27,7 @@
    crs:ParametricMidtoneSplit="50"
    crs:ParametricHighlightSplit="75"
    crs:CurveRefineSaturation="100"
-   crs:ConvertToGrayscale="False"
    crs:ToneCurveName2012="🜃 Adobe Standard to Linear"
-   crs:CameraProfile="Adobe Standard"
-   crs:CameraProfileDigest="A4DC20C59DE4E2DF67946B80BFDA0801"
    crs:HasSettings="True">
    <crs:Name>
     <rdf:Alt>
