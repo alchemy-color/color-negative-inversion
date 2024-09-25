@@ -21,6 +21,10 @@ Copy "🜃 Adobe Standard to Linear.xmp" to:
 * Mac: Users/[username]/Library/Application Support/Adobe/CameraRaw/Settings/
 * Windows: C:\Users\[username]\AppData\Roaming\Adobe\CameraRaw\Settings
 
+Copy "Rec. 2020.icc" to:
+* Mac: /Library/Application Support/Adobe/Color/Profiles
+* Windows: C:\Windows\System32\spool\drivers\color
+
 ## 2. Preparing the negative in Adobe Camera Raw
 * Load a RAW file. While experimenting with JPEG scans is possible, the results will generally be inferior.
 * For DSLR scans
