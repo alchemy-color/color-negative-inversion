@@ -48,7 +48,7 @@ Notes
 * It's worth experimenting with different neutral points, especially from other photographs in the same roll. Load other images as a background layer and repeat these steps if you encounter dramatic shifts in white balance. Create a contact sheet to experiment with more than one photograph at once.
 * Run the "🜃 3. Negative reversal" action. This action prompt you to load the template containing all the layers necessary for the inversion. You can add an extra step that records the loading of the template from your local storage.
 
-### Usage
+### Usage - Inverting and developing in Photoshop
 1. Adjust the exposure and gamma sliders on the “Exposure/Contrast” layer to extract the full dynamic range of the negative. For very contrasted or dense negatives, start by moving the gamma correction slider to the left to reduce contrast, then lower the exposure. You can preserve some faded blacks at this point. The black point can be restored with the Levels layer upstream.
 2. Over and under-exposed parts of the negative fall outside its useful dynamic range. While it may be tempting to recover every bit of information, it is often better to clip these areas to pure black or white. Photoshop doesn't have a histogram in 32 bit mode.
 3. If desired, modify the LUT in the “Print Paper Contrast” layer using the provided paper contrast LUTs to achieve lifted blacks, compressed whites, or a combination of both.
@@ -56,6 +56,10 @@ Notes
 5. Set the black and white points on the “Levels” layer. The layer opacity is set to 25% by default to provide a broader operational range.
 6. Adjust white balance on the “White Balance” layer using the gray point sampling tool. The layer opacity is set to 50% by default, but you can increase it for a stronger effect.
 7. Adjust any other layers as needed.
+
+### Usage - Editing in Lightroom
+1. A flat image can also be saved for further editing in Lightroom. Deactivate every layer above "Linear (negative) > Linear (positive)", save the image.
+2. Open the image in Lightroom and edit to taste.
 
 ## Paper contrast LUTs
 file|function
