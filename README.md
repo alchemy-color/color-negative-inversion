@@ -81,7 +81,7 @@ Notes
 7. Adjust any other layers as needed.
 
 ### Usage #2 - Editing in Lightroom
-1. A flat image can also be saved for further editing in Lightroom. Deactivate every layer above "Linear (negative) > Linear (positive)", save the image.
+1. A flat image can also be saved for further editing in Lightroom. Deactivate every layer above "Linear (negative) > Linear (positive)", save the image. Keep the "Negative Reversal" group active as it contains a necessary LUT.
 2. Open the image in Lightroom and edit to taste.
 3. This method allows for the usage of every Lightroom tool instead of Photoshop layers.
 
