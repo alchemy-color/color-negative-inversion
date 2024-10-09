@@ -3,8 +3,6 @@
 #### Process based on the work by Aaron Buchler https://github.com/abpy/color-neg-resources and Jack Whitaker https://github.com/jackw01/scanlight.
 The following process provides a well-informed, accurate, and flexible method for converting negative images to positive in Photoshop. Aaron Buchler's semi-automated method for converting negatives in 32-bit serves as the foundation for this approach, which simplifies and streamlines the original workflow.
 
-The paper color emulation LUTs provided are based on publicly available ICC profiles. These profiles were stripped of tonal curves and converted into .cube LUTs compatible with Photoshop.
-
 ![DSC07009-2](https://github.com/user-attachments/assets/09767f74-add3-44b5-aac4-98f1294d7668)
 Kodak Gold 200 negative shot with a Canon EOS50e and Canon EF 100 mm f/2.8. Negative illuminated with an iPad screen, photographed with a Sony A7IV, processed with the method described below.
 
@@ -28,9 +26,10 @@ Copy "Rec. 2020.icc" to:
 * Windows: C:\Windows\System32\spool\drivers\color
 
 ## 2. Preparing the negative in Adobe Camera Raw
-* Load a RAW file. While experimenting with JPEG scans is possible, the results will generally be inferior.
+* Load a RAW file. While experimenting with JPEG or TIFF scans is possible, the results will generally be inferior.
 * For DSLR scans
   * White balance to a known dark neutral area of the photographed scene, a deep shadow for example. A dark photographed color will appear brighter in the negative, hence, look for a bright area in the negative. Don't use the burned film tip and transparent film base as these sit outside the usable dynamic range of the film.
+  * Don't white balance JPEG or TIFF images.
   * Load the “🜃 Adobe Standard to Linear” preset. This preset loads the Adobe Standard DNG profile and a curve that modifies the default tone curve of Adobe Standard to linear.
   * Set color noise reduction to 0 to preserve the natural film grain.
   * Open or export as TIFF 16 bit in REC. 2020 color space.
@@ -38,12 +37,11 @@ Copy "Rec. 2020.icc" to:
 * For DNG images originated from scanner software such as Vuescan.
   * You will probably see the DNG profile set to "Embedded".
   * Don't white balance the raw scan as the embedded DNG profile most likely is empty, thus resulting in inadequate color when setting large white balance swings such as the ones originating from the film base. Density balance will take care of this further down the line.
-  * Load the “🜃 Adobe Standard to Linear” preset. This preset won't the Adobe Standard DNG profile as it most likely isn't supported for Vuescan DNGs but the curve that transforms Adobe Standard to linear still proves efficient.
+  * Load the “🜃 Adobe Standard to Linear” preset. This preset won't the Adobe Standard DNG profile as it most likely isn't supported for Vuescan DNGs. Experiment wether or not the custom curve that transforms Adobe Standard to linear results in better inversions.
 
 Notes
-* A fundamental initial step in this whole process is preserving the linearity of the contrast in the digital photograph of the negative. The curve loaded by this preset draws the reverse shape of the tone curve of the Adobe Standard DNG profile.
-* Adobe Standard is used for the sake of compatibility. The vast majority of digital cameras are supported by this standard. When comparing negative inversions made with Adobe Standard versus a custom, highly accurate calibrated profile, the difference is more technical than perceptual.
-* Better accuracy can be achieved with a custom created DNG camera profile specific to the light source used to illuminate the negative. Using such a profile negates the usage of print paper color emulation during the inversion stage.
+* A fundamental initial step in this whole process is preserving the linearity of the negative reproduction of the negative. The curve loaded by the provided preset preset draws the reverse shape of the tone curve of the Adobe Standard DNG profile.
+* Adobe Standard as a base DNG profile is used in this method for the sake of compatibility as the vast majority of digital cameras are supported.
 
 ## 3. Reversing the negative
 *	Run the “🜃 1. Convert to 32-bit” action. This will convert the image to 32-bit and the color space to REC.2020 if it hasn’t already been converted.
@@ -73,10 +71,9 @@ Notes
 1. Adjust the exposure and gamma sliders on the “Exposure/Contrast” layer to extract the full dynamic range of the negative. For very contrasted or dense negatives, start by moving the gamma correction slider to the left to reduce contrast, then lower the exposure. You can preserve some faded blacks at this point. The black point can be restored with the Levels layer upstream.
 2. Over and under-exposed parts of the negative fall outside its useful dynamic range. While it may be tempting to recover every bit of information, it is often better to clip these areas to pure black or white. Photoshop doesn't have a histogram in 32 bit mode.
 3. If desired, modify the LUT in the “Print Paper Contrast” layer using the provided paper contrast LUTs to achieve lifted blacks, compressed whites, or a combination of both.
-4. Change the LUT in the “Print Paper Color” layer to any of the provided paper color LUTs for different color rendering.
-5. Set the black and white points on the “Levels” layer. The layer opacity is set to 25% by default to provide a broader operational range.
-6. Adjust white balance on the “White Balance” layer using the gray point sampling tool. The layer opacity is set to 50% by default, but you can increase it for a stronger effect.
-7. Adjust any other layers as needed.
+4. Set the black and white points on the “Levels” layer. The layer opacity is set to 25% by default to provide a broader operational range.
+5. Adjust white balance on the “White Balance” layer using the gray point sampling tool. The layer opacity is set to 50% by default, but you can increase it for a stronger effect.
+6. Adjust any other layers as needed.
 
 ### Usage #2 - Editing in Lightroom
 1. A flat image can also be saved for further editing in Lightroom. Deactivate every layer above "Linear (negative) > Linear (positive)", save the image. Keep the "Negative Reversal" group active as it contains a necessary LUT.

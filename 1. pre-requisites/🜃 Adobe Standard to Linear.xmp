@@ -57,15 +57,18 @@
    <crs:ToneCurvePV2012>
     <rdf:Seq>
      <rdf:li>0, 0</rdf:li>
-     <rdf:li>9, 15</rdf:li>
-     <rdf:li>18, 24</rdf:li>
-     <rdf:li>27, 32</rdf:li>
-     <rdf:li>67, 58</rdf:li>
-     <rdf:li>81, 67</rdf:li>
-     <rdf:li>113, 85</rdf:li>
-     <rdf:li>163, 116</rdf:li>
-     <rdf:li>197, 144</rdf:li>
-     <rdf:li>226, 178</rdf:li>
+     <rdf:li>8, 13</rdf:li>
+     <rdf:li>17, 23</rdf:li>
+     <rdf:li>29, 33</rdf:li>
+     <rdf:li>51, 48</rdf:li>
+     <rdf:li>82, 67</rdf:li>
+     <rdf:li>116, 87</rdf:li>
+     <rdf:li>143, 103</rdf:li>
+     <rdf:li>161, 115</rdf:li>
+     <rdf:li>176, 126</rdf:li>
+     <rdf:li>200, 147</rdf:li>
+     <rdf:li>215, 164</rdf:li>
+     <rdf:li>225, 178</rdf:li>
      <rdf:li>255, 255</rdf:li>
     </rdf:Seq>
    </crs:ToneCurvePV2012>
