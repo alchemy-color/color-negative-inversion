@@ -88,7 +88,7 @@ Copy "Rec. 2020.icc" to:
 
 * At this point you should see these layers loaded.
 
-<img width="321" alt="Screenshot 2024-09-25 at 16 53 59" src="https://github.com/user-attachments/assets/96f37038-3c20-4ce1-bed2-cd17e3edb6be">
+<img width="338" alt="Screenshot 2024-10-09 at 16 15 13" src="https://github.com/user-attachments/assets/5629a646-0f73-45a9-a553-4a0f83b23b23">
 
 ## Paper contrast LUTs
 file|function
