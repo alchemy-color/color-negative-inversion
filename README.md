@@ -39,7 +39,7 @@ Copy "Rec. 2020.icc" to:
   * Don't white balance the raw scan as the embedded DNG profile most likely is empty, thus resulting in inadequate color when setting large white balance swings such as the ones originating from the film base. Density balance will take care of this further down the line.
   * Load the “🜃 Adobe Standard to Linear” preset. This preset won't the Adobe Standard DNG profile as it most likely isn't supported for Vuescan DNGs. Experiment wether or not the custom curve that transforms Adobe Standard to linear results in better inversions.
 
-Notes
+### NOTES
 * A fundamental initial step in this whole process is preserving the linearity of the negative reproduction of the negative. The curve loaded by the provided preset preset draws the reverse shape of the tone curve of the Adobe Standard DNG profile.
 * Adobe Standard as a base DNG profile is used in this method for the sake of compatibility as the vast majority of digital cameras are supported.
 
@@ -123,6 +123,6 @@ Creating the negative conversion XMP profile to be applied to TIFF and RAW files
 <img width="536" alt="Create  XMP profile" src="https://github.com/user-attachments/assets/45d878ef-f2d6-49a1-a1c7-6d12917f3d7c">
 </div>
 
-Notes
+### NOTES
 *  The default working RGB color space in Photoshop is sRGB. Color may be slightly altered as the conversion from 32 to 16 bit at certain steps of the process defaults the color space to sRGB, regardless of the original color space of the image. It's recommended that you change the working RGB to REC.2020 in color settings for an accurate LUT extraction.
 * When applying the neg>pos profile in raw images, note that every develop panel adjustment happens before the neg>pos LUT. You will see irreconcilable color distortion if changes are made on the develop panel. Contrast and brightness adjustments can be made with curves, inside a Luminance Range mask that covers the whole luminance range. These curves will affect the image after the neg>pos conversion.
