@@ -1,6 +1,7 @@
 # Color negative conversion
 
-#### Process based on the work by Aaron Buchler https://github.com/abpy/color-neg-resources and Jack Whitaker https://github.com/jackw01/scanlight.
+#### Process based on the work by Aaron Buchler https://github.com/abpy/color-neg-resources.
+
 The following process provides a well-informed, accurate, and flexible method for converting negative images to positive in Photoshop. Aaron Buchler's semi-automated method for converting negatives in 32-bit serves as the foundation for this approach, which simplifies and streamlines the original workflow.
 
 ![DSC07009-2](https://github.com/user-attachments/assets/09767f74-add3-44b5-aac4-98f1294d7668)
