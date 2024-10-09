@@ -1,4 +1,4 @@
-# Color negative conversion
+# Color Negative Inversion
 
 #### Process based on the work by Aaron Buchler https://github.com/abpy/color-neg-resources.
 
