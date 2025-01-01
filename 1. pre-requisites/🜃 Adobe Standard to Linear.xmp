@@ -2,73 +2,27 @@
  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about=""
     xmlns:crs="http://ns.adobe.com/camera-raw-settings/1.0/"
-   crs:PresetType="Normal"
-   crs:Cluster="🜃 Alchemy Color tools"
-   crs:UUID="FE15A66E80DB4B3AA63ED68D3044517C"
-   crs:SupportsAmount2="False"
-   crs:SupportsAmount="False"
-   crs:SupportsColor="True"
-   crs:SupportsMonochrome="True"
-   crs:SupportsHighDynamicRange="True"
-   crs:SupportsNormalDynamicRange="True"
-   crs:SupportsSceneReferred="True"
-   crs:SupportsOutputReferred="True"
-   crs:RequiresRGBTables="False"
-   crs:CameraModelRestriction=""
-   crs:Copyright="🜃 Alchemy Color"
-   crs:ContactInfo="info@alchemycolor.com"
-   crs:Version="16.5"
+   crs:Version="17.0.1"
    crs:ProcessVersion="15.4"
-   crs:ParametricShadows="0"
-   crs:ParametricDarks="0"
-   crs:ParametricLights="0"
-   crs:ParametricHighlights="0"
-   crs:ParametricShadowSplit="25"
-   crs:ParametricMidtoneSplit="50"
-   crs:ParametricHighlightSplit="75"
    crs:CurveRefineSaturation="100"
-   crs:ToneCurveName2012="🜃 Adobe Standard to Linear"
-   crs:HasSettings="True">
-   <crs:Name>
-    <rdf:Alt>
-     <rdf:li xml:lang="x-default">🜃 Adobe Standard to Linear</rdf:li>
-    </rdf:Alt>
-   </crs:Name>
-   <crs:ShortName>
-    <rdf:Alt>
-     <rdf:li xml:lang="x-default"/>
-    </rdf:Alt>
-   </crs:ShortName>
-   <crs:SortName>
-    <rdf:Alt>
-     <rdf:li xml:lang="x-default"/>
-    </rdf:Alt>
-   </crs:SortName>
-   <crs:Group>
-    <rdf:Alt>
-     <rdf:li xml:lang="x-default">🜃 Alchemy Color tools</rdf:li>
-    </rdf:Alt>
-   </crs:Group>
-   <crs:Description>
-    <rdf:Alt>
-     <rdf:li xml:lang="x-default"/>
-    </rdf:Alt>
-   </crs:Description>
+   crs:ToneCurveName2012="Custom"
+   crs:HasSettings="True"
+   crs:HasCrop="False">
    <crs:ToneCurvePV2012>
     <rdf:Seq>
      <rdf:li>0, 0</rdf:li>
-     <rdf:li>8, 13</rdf:li>
-     <rdf:li>17, 23</rdf:li>
-     <rdf:li>29, 33</rdf:li>
-     <rdf:li>51, 48</rdf:li>
-     <rdf:li>82, 67</rdf:li>
-     <rdf:li>116, 87</rdf:li>
-     <rdf:li>143, 103</rdf:li>
-     <rdf:li>161, 115</rdf:li>
-     <rdf:li>176, 126</rdf:li>
-     <rdf:li>200, 147</rdf:li>
-     <rdf:li>215, 164</rdf:li>
-     <rdf:li>225, 178</rdf:li>
+     <rdf:li>8, 10</rdf:li>
+     <rdf:li>18, 21</rdf:li>
+     <rdf:li>30, 31</rdf:li>
+     <rdf:li>51, 46</rdf:li>
+     <rdf:li>81, 65</rdf:li>
+     <rdf:li>117, 86</rdf:li>
+     <rdf:li>145, 104</rdf:li>
+     <rdf:li>177, 125</rdf:li>
+     <rdf:li>198, 145</rdf:li>
+     <rdf:li>212, 160</rdf:li>
+     <rdf:li>226, 179</rdf:li>
+     <rdf:li>240, 208</rdf:li>
      <rdf:li>255, 255</rdf:li>
     </rdf:Seq>
    </crs:ToneCurvePV2012>
